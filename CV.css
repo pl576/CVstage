@@ -60,7 +60,7 @@
 }
 
 .flip_front_title {
-  transform: translateZ(-2em);
+  transform: translateZ(3em);
   color: white;
   font-size: 1.8em;
 }

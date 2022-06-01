@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip_img {
+  position: absolute;
+  width: 350px;
+  height: 450px;
+  top: 70px;
+}
+
+.flip_img:hover .flip_content {
+  transform: rotateY(0.5turn);
+}
+
+.flip_content {
+  width: 100%;
+  height: 100%;
+  transition: transform 2s;
+  transform-style: preserve-3d;
+  position: relative;
+  border-radius: 50px;
+}
+
+.flip_front,
+.flip_back {
+  border-radius: 50px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.flip_back {
+  background-image: url(./img/photo_moi.jpg);
+  background-size: 100%;
+}
+
+.flip_front {
+  transform: rotateY(0.5turn);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(134, 0, 146);
+  cursor: pointer;
+}
+
+.flip_front_title {
+  transform: translateZ(-2em);
+  color: white;
+  font-size: 1.8em;
+}
+
+.titre_bienvenue {
+  position: absolute;
+  font-size: 3em;
+  letter-spacing: 0.1em;
+  top: 550px;
+  color: white;
+}

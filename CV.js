@@ -120,3 +120,58 @@ const slidingSeoTextRestart = document.querySelector(".seo");
 function slidingTextSeoRestart() {
   slidingSeoTextRestart.classList.remove("active");
 }
+
+const slidingList = document.querySelector(".list_sources");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = slidingList.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.7
+  ) {
+    slidingList.classList.add("active");
+  }
+  if (
+    scrollTop <
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.7
+  ) {
+    slidingList.classList.remove("active");
+  }
+});
+
+const animVagueUn = document.querySelector(".vague1");
+const animVagueDeux = document.querySelector(".vague2");
+const animCrafter = document.querySelector(".right_icon_crafter");
+const animImg = document.querySelector(".beer_text img");
+const animRightIconSide = document.querySelector(".right_icon_side");
+const craftHover = document.querySelector(".craft_container");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = craftHover.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.5
+  ) {
+    animVagueUn.classList.add("active");
+    animVagueDeux.classList.add("active");
+    animCrafter.classList.add("active");
+    animImg.classList.add("active");
+    animRightIconSide.classList.add("active");
+  }
+  if (
+    scrollTop <
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.5
+  ) {
+    animVagueUn.classList.remove("active");
+    animVagueDeux.classList.remove("active");
+    animCrafter.classList.remove("active");
+    animImg.classList.remove("active");
+    animRightIconSide.classList.remove("active");
+  }
+});

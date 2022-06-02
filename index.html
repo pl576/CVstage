@@ -31,7 +31,7 @@
     </header>
 
     <section class="aboutme">
-      <div class="older_job_container">
+      <a href="#" class="older_job_container">
         <div class="older_job">
           <p class="exp_pro">­Éxpérience professionnelle</p>
           <p class="msg_exp_pro">Venez découvrir ce que je faisais avant.</p>
@@ -51,25 +51,35 @@
           >
           </lord-icon>
         </div>
-      </div>
+      </a>
       <div class="next_to_older_job">
-        <div class="contact">
-          <p class="text_contact">Contact</p>
-          <div class="lien_contact">
-            <i class="fa-brands fa-linkedin"></i>
+        <a
+          href="https://www.linkedin.com/in/pierre-lebas-5b798923b/"
+          target="_blank"
+          class="contact_container"
+        >
+          <div class="contact">
+            <p class="text_contact">Contact</p>
+            <div class="lien_contact">
+              <i class="fa-brands fa-linkedin"></i>
+            </div>
           </div>
-        </div>
-        <div class="sources">
-          <p class="text_sources"></p>
-        </div>
+        </a>
+        <a href="#" class="sources_container">
+          <div class="sources">
+            <p class="text_sources"></p>
+          </div>
+        </a>
       </div>
     </section>
-    <section class="help_me">
-      <p class="what_i_need">What I need</p>
-      <p class="for_what">
-        J'ai besoin de vous pour effectuer un stage de 3 mois (Juillet -
-        Septembre).
-      </p>
+    <section class="help_me_container">
+      <div class="help_me">
+        <p class="what_i_need">Le pourquoi du comment</p>
+        <p class="for_what">
+          J'ai besoin de vous pour effectuer un stage de 3 mois (Juillet -
+          Septembre).
+        </p>
+      </div>
     </section>
     <section class="afci">
       <div class="left1">avec afci</div>
@@ -87,10 +97,68 @@
       <div class="left4">hardskills</div>
       <div class="right4"></div>
     </section>
+    <section class="school">
+      <div class="left5">school</div>
+      <div class="right5"></div>
+    </section>
 
     <section class="books_series">
-      <div class="books"></div>
-      <div class="series"></div>
+      <div class="book_container">
+        <div
+          class="books"
+          onmouseenter="slidingTextSeo()"
+          onmouseleave="slidingTextSeoRestart()"
+        >
+          <p class="book_text">Livre du moment</p>
+          <div class="seo_container">
+            <p class="seo">
+              7 techniques pour se lancer en rédaction web - Dimitri Carlet
+            </p>
+          </div>
+          <lord-icon
+            class="book_icon"
+            src="https://cdn.lordicon.com/wxnxiano.json"
+            trigger=""
+            style="width: 100px; height: 100px"
+          >
+          </lord-icon>
+          <lord-icon
+            class="book_icon_anim"
+            src="https://cdn.lordicon.com/wxnxiano.json"
+            trigger="loop"
+            style="width: 100px; height: 100px"
+          >
+          </lord-icon>
+        </div>
+      </div>
+      <div class="series_container">
+        <div
+          class="series"
+          onmouseenter="slidingTextStranger()"
+          onmouseleave="slidingTextStrangerRestart()"
+        >
+          <p class="series_text">Série du moment</p>
+          <div class="stranger_container">
+            <p class="stranger_things">
+              Stranger things. Stranger things. Stranger things.
+            </p>
+          </div>
+          <lord-icon
+            class="tv"
+            src="https://cdn.lordicon.com/iahpzgqp.json"
+            trigger=""
+            style="width: 100px; height: 100px"
+          >
+          </lord-icon>
+          <lord-icon
+            class="tv_anim"
+            src="https://cdn.lordicon.com/iahpzgqp.json"
+            trigger="loop"
+            style="width: 100px; height: 100px"
+          >
+          </lord-icon>
+        </div>
+      </div>
     </section>
 
     <section class="craft">
@@ -110,17 +178,33 @@
       <div class="lien">
         <p class="text_lien">Retrouvez-moi sur:</p>
         <div class="logo_lien">
-          <i class="fa-brands fa-linkedin"></i>
-          <i class="fa-brands fa-github"></i>
+          <a
+            href="https://www.linkedin.com/in/pierre-lebas-5b798923b/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin" title="LinkedIn"></i
+          ></a>
+          <a href="https://github.com/pl576" target="_blank"
+            ><i class="fa-brands fa-github" title="Github"></i
+          ></a>
         </div>
       </div>
       <div class="logiciels">
         <p class="text_logiciels">Made with ♥ and:</p>
         <div class="logo_logiciels">
-          <img class="vscode" src="./img/logo_vscode.png" alt="logo_vscode" />
-          <i class="fa-brands fa-figma"></i>
-          <i class="fa-brands fa-github"></i>
-          <img class="krita" src="./img/logo_krita.png" alt="logo_krita" />
+          <img
+            class="vscode"
+            src="./img/logo_vscode.png"
+            alt="logo_vscode"
+            title="Visual Studio Code"
+          />
+          <i class="fa-brands fa-figma" title="Figma"></i>
+          <i class="fa-brands fa-github" title="Github"></i>
+          <img
+            class="krita"
+            src="./img/logo_krita.png"
+            alt="logo_krita"
+            title="Krita"
+          />
         </div>
       </div>
     </footer>

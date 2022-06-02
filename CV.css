@@ -12,6 +12,7 @@ html {
   --color7: #8e44ad;
   --color8: #27ae60;
   --color9: black;
+  --color10: rgb(18, 19, 48);
 }
 
 body {
@@ -138,19 +139,44 @@ header {
   justify-content: space-between;
 }
 
+.older_job_container {
+  position: relative;
+  width: 54.5%;
+  height: 300px;
+
+  display: flex;
+  align-items: center;
+}
+
+.older_job {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color6);
+  border-radius: 50px;
+}
+
 .icon_key {
   position: absolute;
   right: 4%;
   bottom: 4%;
 }
-.older_job {
-  position: relative;
-  width: 54.5%;
-  height: 300px;
-  background-color: var(--color6);
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
+.icon_key_anim {
+  position: absolute;
+  right: 4%;
+  bottom: 4%;
+  display: none;
+}
+
+.older_job:hover .icon_key {
+  display: none;
+}
+.older_job:hover .icon_key_anim {
+  display: block;
+}
+
+.older_job_container:hover .older_job {
+  transform: scale(0.8);
 }
 
 .exp_pro {
@@ -165,7 +191,6 @@ header {
   position: absolute;
   left: 35px;
   font-size: 3em;
-  width: fit-content;
 }
 
 .next_to_older_job {
@@ -185,6 +210,28 @@ header {
 
 .contact {
   background: var(--color8);
+  position: relative;
+}
+
+.text_contact {
+  position: absolute;
+  height: 30%;
+  left: 35px;
+}
+
+.lien_contact {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lien_contact i {
+  font-size: 3.5em;
+  color: var(--color6);
 }
 
 .sources {
@@ -298,7 +345,7 @@ p {
 .craft {
   width: 100%;
   height: 300px;
-  background-color: lightblue;
+  background-color: var(--color6);
   position: relative;
   border-radius: 50px;
   display: flex;
@@ -310,6 +357,7 @@ p {
   position: absolute;
   top: 0%;
   left: 35px;
+  color: var(--color10);
 }
 
 .beer_text {
@@ -317,6 +365,7 @@ p {
   display: flex;
   align-items: center;
   font-size: 3em;
+  color: var(--color10);
 }
 
 .beer_text img {
@@ -330,8 +379,84 @@ p {
   font-size: 0.9em;
   text-transform: uppercase;
   letter-spacing: -0.1em;
-  color: var(--color9);
+  color: var(--color10);
 }
 
 .left_icon_side {
+}
+
+/* footer */
+
+footer {
+  width: 100%;
+  height: 150px;
+  margin-top: 13px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lien,
+.logiciels {
+  border-radius: 50px;
+}
+
+.lien {
+  width: 34.5%;
+  height: 100%;
+  background-color: var(--color4);
+  position: relative;
+}
+
+.text_lien {
+  position: absolute;
+  height: 30%;
+  left: 35px;
+}
+
+.logo_lien {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.lien i {
+  font-size: 3.5em;
+  color: var(--color6);
+}
+
+.logiciels {
+  position: relative;
+  width: 64.5%;
+  height: 100%;
+  background-color: var(--color5);
+}
+
+.text_logiciels {
+  position: absolute;
+  height: 30%;
+  left: 35px;
+}
+
+.logo_logiciels {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.logiciels i {
+  font-size: 3.5em;
+  color: var(--color6);
+}
+
+.vscode,
+.krita {
+  width: 60px;
 }

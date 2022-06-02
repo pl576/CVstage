@@ -33,13 +33,15 @@ body {
   justify-content: center;
   align-items: center;
   transform: translateY(0);
-  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, opacity 1s;
   z-index: 1;
   top: 0;
+  opacity: 1;
 }
 
 .loader.active {
   transform: translateY(-100%);
+  opacity: 0;
 }
 
 .loader:hover .flip_content {

@@ -3,10 +3,19 @@ html {
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  --color1: #fff200;
+  --color2: #7d5fff;
+  --color3: #bdc3c7;
+  --color4: #7f8c8d;
+  --color5: #34495e;
+  --color6: white;
+  --color7: #8e44ad;
+  --color8: #27ae60;
+  --color9: black;
 }
 
 body {
-  background-color: black;
+  background-color: var(--color9);
   overflow: hidden;
 }
 /*Loader*/
@@ -15,7 +24,7 @@ body {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: black;
+  background-color: var(--color9);
   background-size: 100%;
   display: flex;
   justify-content: center;
@@ -71,13 +80,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #8e44ad;
+  background-color: var(--color7);
   cursor: pointer;
 }
 
 .flip_front_title {
   transform: translateZ(5em);
-  color: white;
+  color: var(--color6);
   font-size: 1.8em;
 }
 
@@ -86,13 +95,13 @@ body {
   font-size: 3em;
   letter-spacing: 0.1em;
   top: 80%;
-  color: white;
+  color: var(--color6);
 }
 
 /* Fin Loader */
 /* Header*/
 header {
-  color: white;
+  color: var(--color6);
   font-size: 3em;
   margin-left: 5%;
 }
@@ -128,25 +137,31 @@ header {
   display: flex;
   justify-content: space-between;
 }
+
+.icon_key {
+  position: absolute;
+  right: 4%;
+  bottom: 4%;
+}
 .older_job {
   position: relative;
   width: 54.5%;
   height: 300px;
-  background-color: white;
+  background-color: var(--color6);
   border-radius: 50px;
   display: flex;
   align-items: center;
 }
 
 .exp_pro {
-  color: black;
+  color: var(--color9);
   position: absolute;
   top: 0;
   left: 35px;
 }
 
 .msg_exp_pro {
-  color: black;
+  color: var(--color9);
   position: absolute;
   left: 35px;
   font-size: 3em;
@@ -169,14 +184,14 @@ header {
 }
 
 .contact {
-  background: #27ae60;
+  background: var(--color8);
 }
 
 .sources {
-  background-color: #8e44ad;
+  background-color: var(--color7);
 }
 p {
-  color: white;
+  color: var(--color6);
 }
 
 /*help me*/
@@ -187,7 +202,7 @@ p {
   height: 400px;
   margin-top: 13px;
   border-radius: 50px;
-  background-color: #34495e;
+  background-color: var(--color5);
   display: flex;
   align-items: center;
 }
@@ -207,36 +222,116 @@ p {
 /* afci */
 
 .afci,
-.myself {
+.myself,
+.softskills,
+.hardskills {
   margin: auto;
   width: 90%;
   height: 200px;
   margin-top: 13px;
   display: flex;
+  justify-content: space-between;
 }
 
 .left1,
 .left2,
+.left3,
+.left4,
 .right1,
-.right2 {
+.right2,
+.right3,
+.right4 {
   width: 49.5%;
   height: 100%;
 }
 
 .left1,
-.left2 {
-  background-color: #7f8c8d;
+.left2,
+.left3,
+.left4 {
+  background-color: var(--color4);
   border-radius: 50px;
   transform: translateX(100%);
   transition: transform 1s;
 }
 
 .left1.active,
+.left3.active,
+.left4.active,
 .left2.active {
   transform: translate(0);
 }
 .right1,
+.right3,
+.right4,
 .right2 {
-  background-color: #bdc3c7;
+  background-color: var(--color3);
   border-radius: 50px;
+}
+
+/* books series */
+
+.books_series {
+  width: 100%;
+  height: 200px;
+  margin-top: 13px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.books,
+.series {
+  width: 49.5%;
+  height: 100%;
+  border-radius: 50px;
+}
+
+.books {
+  background-color: var(--color2);
+}
+.series {
+  background-color: var(--color1);
+}
+
+/*beer crafter*/
+
+.craft {
+  width: 100%;
+  height: 300px;
+  background-color: lightblue;
+  position: relative;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  margin-top: 13px;
+}
+
+.not_convince {
+  position: absolute;
+  top: 0%;
+  left: 35px;
+}
+
+.beer_text {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  font-size: 3em;
+}
+
+.beer_text img {
+  width: 200px;
+}
+
+.right_icon_crafter {
+  transform: rotate(0.75turn);
+  position: absolute;
+  left: 165px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: -0.1em;
+  color: var(--color9);
+}
+
+.left_icon_side {
 }

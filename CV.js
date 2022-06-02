@@ -43,3 +43,33 @@ window.addEventListener("scroll", () => {
     slidingSkillsLeft2.classList.add("active");
   }
 });
+const slidingSkillsLeft4 = document.querySelector(".left4");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport =
+    slidingSkillsLeft4.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.5
+  ) {
+    slidingSkillsLeft4.classList.add("active");
+  }
+});
+const slidingSkillsLeft3 = document.querySelector(".left3");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport =
+    slidingSkillsLeft3.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.5
+  ) {
+    slidingSkillsLeft3.classList.add("active");
+  }
+});

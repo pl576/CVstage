@@ -111,7 +111,7 @@ a {
   position: absolute;
   font-size: 3em;
   letter-spacing: 0.1em;
-  top: 80%;
+  top: 530px;
   color: var(--color6);
 }
 
@@ -187,12 +187,16 @@ header {
   position: absolute;
   right: 4%;
   bottom: 4%;
+  width: 100px;
+  height: 100px;
 }
 .icon_key_anim {
   position: absolute;
   right: 4%;
   bottom: 4%;
   display: none;
+  width: 100px;
+  height: 100px;
 }
 
 .older_job_container:hover .icon_key {
@@ -316,7 +320,7 @@ header {
 }
 
 .list_sources.active {
-  transform: translateX(-300%);
+  transform: translateX(-500%);
   transition: transform 13s ease-out;
   transition-delay: 1s;
 }
@@ -421,7 +425,7 @@ p {
 .left4.active,
 .left2.active,
 .left5.active {
-  transform: translateX(-1%);
+  transform: translateX(-2%);
 }
 .right1,
 .right3,
@@ -484,7 +488,7 @@ p {
 
 .right3 {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
@@ -510,13 +514,13 @@ p {
   margin-left: 0;
   font-size: 1em;
   margin-top: 0;
-  transform: rotate(0) translateX(100%);
+  transform: translateX(100%);
   opacity: 0;
   transition: transform 0.3s, opacity 0.3s;
   transition-delay: 1s;
 }
 .right3 .text_skills_right.active {
-  transform: rotate(0.125turn) translateX(0);
+  transform: translateX(0);
   opacity: 1;
 }
 
@@ -576,30 +580,39 @@ p {
   position: absolute;
   top: 0%;
   left: 35px;
-  color: var(--color10);
+  color: var(--color6);
 }
 
 .book_icon {
   position: absolute;
   right: 4%;
   bottom: 4%;
+
+  width: 100px;
+  height: 100px;
 }
 .book_icon_anim {
   position: absolute;
   right: 4%;
   bottom: 4%;
   display: none;
+  width: 100px;
+  height: 100px;
 }
 .tv {
   position: absolute;
   right: 4%;
   bottom: 4%;
+  width: 100px;
+  height: 100px;
 }
 .tv_anim {
   position: absolute;
   right: 4%;
   bottom: 4%;
   display: none;
+  width: 100px;
+  height: 100px;
 }
 
 .book_container:hover .books,
@@ -627,16 +640,17 @@ p {
   overflow: hidden;
 }
 
-.stranger_things {
+.stranger_things,
+.seo {
   font-size: 4em;
   transform: translateX(100%);
   text-transform: uppercase;
-  color: var(--color9);
+  color: var(--color6);
   transition: transform 3s;
 }
 
 .stranger_things.active {
-  transform: translateX(-300%);
+  transform: translateX(-500%);
   transition: transform 13s ease-out;
   transition-delay: 1s;
 }
@@ -648,17 +662,9 @@ p {
   overflow: hidden;
 }
 
-.seo {
-  font-size: 4em;
-  transform: translateX(100%);
-  text-transform: uppercase;
-  color: var(--color9);
-  transition: transform 3s;
-}
-
 .seo.active {
   transform: translateX(-450%);
-  transition: transform 13s ease-out;
+  transition: transform 12s ease-out;
 }
 
 /*beer crafter*/
@@ -874,10 +880,36 @@ footer {
   .for_what {
     width: 75%;
   }
+  .seo.active {
+    transform: translateX(-600%);
+    transition: transform 16s ease-out;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .seo.active {
+    transform: translateX(-800%);
+    transition: transform 16s ease-out;
+  }
 }
 @media screen and (max-width: 740px) {
   .for_what {
     width: 100%;
+  }
+  .text_skills_right {
+    margin-left: 15px;
+  }
+  .beer_text {
+    height: 75%;
+  }
+  .beer_text img {
+    width: 150px;
+  }
+  .right_icon_crafter {
+    left: 200px;
+  }
+  .right_icon_side.active {
+    left: 200px;
   }
 }
 @media screen and (max-width: 598px) {
@@ -894,7 +926,14 @@ footer {
   .right2 .text_skills_right,
   .right3 .text_skills_right,
   .right4 .text_skills_right {
-    font-size: 0.8em !important;
+    font-size: 0.75em !important;
+  }
+  .list_sources {
+    font-size: 2em;
+  }
+
+  .short_description {
+    font-size: 0.8em;
   }
 }
 @media screen and (max-width: 790px) {
@@ -908,5 +947,80 @@ footer {
   .seo,
   .stranger_things {
     font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .msg_exp_pro {
+    font-size: 1.5em;
+    top: 20%;
+  }
+
+  .right1 i {
+    font-size: 2.5em;
+  }
+  .sql {
+    font-size: 1.5em;
+  }
+
+  .book_icon,
+  .book_icon_anim,
+  .tv,
+  .tv_anim {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .icon_key {
+    width: 50px;
+    height: 50px;
+  }
+  .icon_key_anim {
+    display: none;
+  }
+  .sources_container {
+    height: 65%;
+  }
+  .contact_container {
+    height: 34%;
+  }
+  .text_sources {
+    left: 10px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .right_icon_crafter {
+    left: 125px;
+  }
+  .beer_text,
+  .beer_text img {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .right_icon_side.active {
+    left: 125px;
+  }
+
+  .lien i {
+    font-size: 2.5em;
+  }
+  .logiciels i {
+    font-size: 2.5em;
+  }
+
+  .vscode,
+  .krita {
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .right_icon_side {
+    font-size: 0.5em;
   }
 } ;

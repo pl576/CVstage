@@ -97,29 +97,29 @@ window.addEventListener("scroll", () => {
   }
 });
 
-const slidingStrangerText = document.querySelector(".stranger_things");
+// const slidingStrangerText = document.querySelector(".stranger_things");
 
-function slidingTextStranger() {
-  slidingStrangerText.classList.add("active");
-}
+// function slidingTextStranger() {
+//   slidingStrangerText.classList.add("active");
+// }
 
-const slidingStrangerTextRestart = document.querySelector(".stranger_things");
+// const slidingStrangerTextRestart = document.querySelector(".stranger_things");
 
-function slidingTextStrangerRestart() {
-  slidingStrangerTextRestart.classList.remove("active");
-}
+// function slidingTextStrangerRestart() {
+//   slidingStrangerTextRestart.classList.remove("active");
+// }
 
-const slidingSeoText = document.querySelector(".seo");
+// const slidingSeoText = document.querySelector(".seo");
 
-function slidingTextSeo() {
-  slidingSeoText.classList.add("active");
-}
+// function slidingTextSeo() {
+//   slidingSeoText.classList.add("active");
+// }
 
-const slidingSeoTextRestart = document.querySelector(".seo");
+// const slidingSeoTextRestart = document.querySelector(".seo");
 
-function slidingTextSeoRestart() {
-  slidingSeoTextRestart.classList.remove("active");
-}
+// function slidingTextSeoRestart() {
+//   slidingSeoTextRestart.classList.remove("active");
+// }
 
 const slidingList = document.querySelector(".list_sources");
 
@@ -173,5 +173,69 @@ window.addEventListener("scroll", () => {
     animCrafter.classList.remove("active");
     animImg.classList.remove("active");
     animRightIconSide.classList.remove("active");
+  }
+});
+
+const seriesBookContainer = document.querySelector(".books_series");
+const book = document.querySelector(".seo");
+const series = document.querySelector(".stranger_things");
+
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport =
+    seriesBookContainer.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.6
+  ) {
+    book.classList.add("active");
+    series.classList.add("active");
+  }
+  if (
+    scrollTop <
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.6
+  ) {
+    book.classList.remove("active");
+    series.classList.remove("active");
+  }
+});
+
+const rightThree = document.querySelector(".right3");
+const rightFour = document.querySelector(".right4");
+const softSkills1 = document.querySelector("#crea");
+const softSkills2 = document.querySelector("#team");
+const softSkills3 = document.querySelector("#critique");
+const softSkills4 = document.querySelector("#service");
+const softSkills5 = document.querySelector("#adapt");
+const softSkills6 = document.querySelector("#tab");
+const softSkills7 = document.querySelector("#krita");
+const softSkills8 = document.querySelector("#office");
+const softSkills9 = document.querySelector("#build");
+window.addEventListener("scroll", () => {
+  const { scrollTop, clientHeight } = document.documentElement;
+
+  const topElementToTopViewport = rightThree.getBoundingClientRect().top;
+  const topElementToTopViewport1 = rightFour.getBoundingClientRect().top;
+
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.5
+  ) {
+    softSkills1.classList.add("active");
+    softSkills2.classList.add("active");
+    softSkills3.classList.add("active");
+    softSkills4.classList.add("active");
+    softSkills5.classList.add("active");
+  }
+  if (
+    scrollTop >
+    (scrollTop + topElementToTopViewport1).toFixed() - clientHeight * 0.5
+  ) {
+    softSkills6.classList.add("active");
+    softSkills7.classList.add("active");
+    softSkills8.classList.add("active");
+    softSkills9.classList.add("active");
   }
 });

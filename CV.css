@@ -27,8 +27,13 @@ html {
 body {
   background-color: var(--color9);
   overflow: hidden;
+  cursor: default;
 }
 /*Loader*/
+
+a {
+  cursor: pointer;
+}
 
 .loader {
   position: fixed;
@@ -313,6 +318,7 @@ header {
 .list_sources.active {
   transform: translateX(-300%);
   transition: transform 13s ease-out;
+  transition-delay: 1s;
 }
 
 p {
@@ -469,18 +475,65 @@ p {
   margin: 0;
 }
 
-.right2 {
+.right2,
+.right5 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.right3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.right4 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .text_skills_right {
   color: black !important;
   display: inline-block;
   margin-left: 35px;
-  font-size: 1.5em;
+  font-size: 1em;
   margin-top: 0;
+}
+.right3 .text_skills_right {
+  color: black !important;
+  display: inline-block;
+  margin-left: 0;
+  font-size: 1em;
+  margin-top: 0;
+  transform: rotate(0) translateX(100%);
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+  transition-delay: 1s;
+}
+.right3 .text_skills_right.active {
+  transform: rotate(0.125turn) translateX(0);
+  opacity: 1;
+}
+
+.right4 .text_skills_right {
+  color: black !important;
+  display: inline-block;
+  margin-left: 0;
+  font-size: 1em;
+  margin-top: 0;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+  transition-delay: 1s;
+}
+.right4 .text_skills_right.active {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 /* books series */
@@ -585,6 +638,7 @@ p {
 .stranger_things.active {
   transform: translateX(-300%);
   transition: transform 13s ease-out;
+  transition-delay: 1s;
 }
 
 .seo_container {
@@ -653,12 +707,12 @@ p {
   transform: translateY(100%);
   opacity: 0;
   transition: transform 0.5s, opacity 0.5s;
-  transition-delay: 1s;
 }
 
 .beer_text img.active {
   transform: translateY(0);
   opacity: 1;
+  transition-delay: 1s;
 }
 
 .right_icon_crafter {
@@ -672,12 +726,12 @@ p {
   transform: translateY(100%);
   opacity: 0;
   transition: transform 0.5s, opacity 0.5s;
-  transition-delay: 1s;
 }
 
 .right_icon_crafter.active {
   transform: translateY(0);
   opacity: 1;
+  transition-delay: 1s;
 }
 
 .right_icon_side {
@@ -687,12 +741,12 @@ p {
   transform: translateY(100%);
   opacity: 0;
   transition: transform 0.5s, opacity 0.5s;
-  transition-delay: 2.5s;
 }
 
 .right_icon_side.active {
   transform: translateY(0);
   opacity: 1;
+  transition-delay: 2.5s;
 }
 
 .vague1 {
@@ -815,3 +869,44 @@ footer {
 .fa-heart {
   font-size: 1.5em !important;
 }
+
+@media screen and (max-width: 1095px) {
+  .for_what {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 740px) {
+  .for_what {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 598px) {
+  .for_what {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 850px) {
+  .msg_exp_pro {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 630px) {
+  .right2 .text_skills_right,
+  .right3 .text_skills_right,
+  .right4 .text_skills_right {
+    font-size: 0.8em !important;
+  }
+}
+@media screen and (max-width: 790px) {
+  .stranger_container,
+  .seo_container {
+    width: 50%;
+    bottom: 0;
+    position: absolute;
+  }
+
+  .seo,
+  .stranger_things {
+    font-size: 2em;
+  }
+} ;

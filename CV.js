@@ -156,7 +156,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollTop >
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.5
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.6
   ) {
     animVagueUn.classList.add("active");
     animVagueDeux.classList.add("active");
@@ -166,7 +166,7 @@ window.addEventListener("scroll", () => {
   }
   if (
     scrollTop <
-    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.5
+    (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.6
   ) {
     animVagueUn.classList.remove("active");
     animVagueDeux.classList.remove("active");

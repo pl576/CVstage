@@ -19,6 +19,8 @@ html {
   --color14: #f1c40f;
   --color15: #686de0;
   --color16: #e1b12c;
+  --color17: #5758bb;
+  --color18: #b53471;
   scroll-behavior: smooth;
 }
 
@@ -39,7 +41,7 @@ body {
   align-items: center;
   transform: translateY(0);
   transition: transform 1s ease-in-out, opacity 1s;
-  z-index: 1;
+  z-index: 3;
   top: 0;
   opacity: 1;
 }
@@ -395,7 +397,7 @@ p {
 .left3,
 .left4,
 .left5 {
-  background-color: var(--color2);
+  background-color: var(--color17);
   border-radius: 50px;
   transform: translateX(100%);
   transition: transform 1s;
@@ -610,9 +612,7 @@ p {
 .craft_container {
   width: 100%;
   height: 300px;
-
   position: relative;
-
   display: flex;
   align-items: center;
   margin-top: 13px;
@@ -625,11 +625,6 @@ p {
   width: 100%;
   height: 100%;
   background-color: var(--color16);
-  transition: transform 0.3s;
-}
-
-.craft_container:hover .craft {
-  transform: scale(0.95);
 }
 
 .not_convince {
@@ -658,6 +653,7 @@ p {
   transform: translateY(100%);
   opacity: 0;
   transition: transform 0.5s, opacity 0.5s;
+  transition-delay: 1s;
 }
 
 .beer_text img.active {
@@ -676,6 +672,7 @@ p {
   transform: translateY(100%);
   opacity: 0;
   transition: transform 0.5s, opacity 0.5s;
+  transition-delay: 1s;
 }
 
 .right_icon_crafter.active {
@@ -690,7 +687,7 @@ p {
   transform: translateY(100%);
   opacity: 0;
   transition: transform 0.5s, opacity 0.5s;
-  transition-delay: 1.5s;
+  transition-delay: 2.5s;
 }
 
 .right_icon_side.active {
@@ -742,11 +739,23 @@ footer {
   border-radius: 50px;
 }
 
-.lien {
+.lien_container {
   width: 34.5%;
   height: 100%;
-  background-color: var(--color4);
+
   position: relative;
+}
+
+.lien_container:hover .lien {
+  transform: scale(0.95);
+}
+
+.lien {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+  background-color: var(--color5);
 }
 
 .text_lien {
@@ -774,7 +783,7 @@ footer {
   position: relative;
   width: 64.5%;
   height: 100%;
-  background-color: var(--color5);
+  background-color: var(--color7);
 }
 
 .text_logiciels {

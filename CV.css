@@ -111,7 +111,8 @@ a {
   position: absolute;
   font-size: 3em;
   letter-spacing: 0.1em;
-  top: 485px;
+  top: 5px;
+  margin-top: 0;
   color: var(--color6);
 }
 
